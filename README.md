@@ -19,3 +19,6 @@ The first one is to activate the actor another amount of time.
 If the actor is currently active, the actions will be counted and the actor will activated again if the amount of time is reached.
 This will repeated as long as the lautering step is active and the remain-action-counter is not 0.
 The other action got you to the next brewstep.
+
+ToDo:
+- [ ] add optional second actor for lautering valve which opens after the first timer is reached.
