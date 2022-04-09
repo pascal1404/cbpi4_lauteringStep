@@ -5,7 +5,7 @@ setup(name='cbpi4_lauteringStep',
       description='CraftBeerPi Plugin Lautering Step',
       author='Pascal Scholz',
       author_email='pascal1404@gmx.de',
-      url='',
+      url='https://github.com/pascal1404/cbpi4_lauteringStep',
       include_package_data=True,
       package_data={
         # If any package contains *.txt or *.rst files, include them:
