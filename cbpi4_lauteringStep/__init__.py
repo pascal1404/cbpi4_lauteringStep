@@ -106,6 +106,13 @@ class LauteringStep(CBPiStep):
         await self.push_update()
 
     async def on_start(self):
+        self.actor = self.cbpi.config.get("lautering_actor", None)
+        if self.actor is None:
+            logger.info("INIT Actor for lautering")
+            try:
+                await self.cbpi.config.add("lautering_actor", "", ConfigType.STRING, "Actor for lautering")
+            except:
+                logger.warning('Unable to update config')
         self.sparging_water=1
         self.remaining_water=0
         self.Actor=self.props.get("Actor", None)

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='cbpi4_lauteringStep',
-      version='0.0.1',
+      version='0.0.2',
       description='CraftBeerPi Plugin Lautering Step',
       author='Pascal Scholz',
       author_email='pascal1404@gmx.de',
