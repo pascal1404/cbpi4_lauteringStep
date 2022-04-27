@@ -40,6 +40,7 @@ class LauteringStep(CBPiStep):
         self.kettle.target_temp = 0
         await self.setAutoMode(False)
         self.cbpi.notify(self.name, 'Step finished', NotificationType.SUCCESS)
+        await asyncio.sleep(3)
        
         await self.next()
 
@@ -66,7 +67,7 @@ class LauteringStep(CBPiStep):
         if self.stopped is not True:
             self.summary = "Start heating"
             await self.set_target_temp(self.props.get("Kettle", None), int(self.props.get("Temp", None)))
-            self.cbpi.notify(self.name, 'Start heating', NotificationType.INFO)
+            self.cbpi.notify(self.name, 'Heating started.', NotificationType.INFO)
             self.timer = Timer(int(self.props.get("Fly_Sparging_Delay",0)) *60 ,on_update=self.on_heating_update, on_done=self.start_fly_sparging)
             self.timer.start()
             self.timer.is_running = True
