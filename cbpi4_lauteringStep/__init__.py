@@ -120,7 +120,7 @@ class LauteringStep(CBPiStep):
         if self.kettle is not None:
             self.kettle.target_temp = 0
         await self.setAutoMode(True)
-        await asyncio.sleep(1)
+        await asyncio.sleep(3)
         self.cbpi.notify("Transfer mash into lauter tun", "Transfer the mash into the lauter tun. If you ready click 'start lautering pause'", NotificationType.INFO, action=[NotificationAction("start lautering pause", self.lautering_pause)])
         self.stopped = False
         await self.push_update()
